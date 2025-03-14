@@ -1,0 +1,313 @@
+/* ----------------------------------------------------------------
+    Style sheet for the website
+    ---------------------------------------------------------------- */
+
+:root {
+    /* colors */
+    --color-primary: #0D330E;
+    --color-secondary: #FFF;
+    --color-tertiary: #071E07;
+    --color-error: #ff0000;
+    --color-success: #2D531A;
+    --color-highlight: #6E86;
+    --color-accent: #DAA112;
+
+    /* spacing */
+    --space-small: 5px;
+    --space-medium: 10px;
+    --space-large: 20px;
+    --space-extra-large: 40px;
+
+    /* fonts */
+    --font-one: 'Consolas'; 
+    --font-two: 'Arial';
+    --font-size-small: 12px;
+    --font-size-medium: 16px;
+    --font-size-large: 20px;
+    --font-size-extra-large: 24px;
+
+    /* typography */
+    --text-decoration: none;
+    --text-align: center;
+
+    /* Border Radius */
+    --border-radius-sm: 4px;
+    --border-radius-md: 8px; 
+    --border-radius-lg: 10px; 
+}
+
+body {
+    font-family: var(--font-one);
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+}
+
+header {
+    padding: 20px;
+    background-color: transparent;
+    font-family: var(--font-one);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: var(--space-extra-large); /* space out the nav */
+    border-bottom: solid 1px var(--color-highlight);
+}
+
+nav ul li a {
+    color: var(--color-secondary);
+    text-decoration: none;
+    font-size: var(--font-size-large);
+}
+
+/* ====================================
+   Hero Section
+==================================== */
+.hero-section {
+    background: url('how-to-sell-retail-clothing.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-text {
+    text-align: center;
+    color: #fff;
+    background-color: rgba(0,0,0,0.5);
+    padding: var(--space-medium);
+    border-radius: var(--border-radius-lg);
+}
+
+.hero-text h1 {
+    font-size: var(--font-size-extra-large); 
+    margin-bottom: var(--space-medium);
+}
+
+.hero-text p {
+    font-size: 1.125rem; /* 18px */
+    margin-bottom: 1.875rem; /* 30px */
+}
+
+.hero-text .btn {
+    background-color: var(--color-highlight);
+    color: var(--color-secondary);
+    padding: 0.9375rem 1.875rem; /* 15px 30px */
+    font-size: 1.125rem; /* 18px */
+    border: none;
+    border-radius: var(--border-radius-md);
+    transition: background-color 0.3s ease;
+}
+
+.hero-text .btn:hover {
+    background-color: var(--color-success); 
+}
+
+.hero {
+    background: url('csm_Mango.jpg') no-repeat center center/cover;
+    padding: var(--space-extra-large);
+    width: 100%;
+    height: 70vh;
+    align-items: var(--text-align);
+}
+
+.hero .container {    
+    border-radius: var(--border-radius-lg);
+    font-family: var(--font-one);
+    text-align: left;
+    padding: var(--space-large);
+    background-color: rgba(0,0,0,0.5);
+    width: 90%;
+    height: 50%;
+}
+
+.hero button {
+    padding: 10px 20px;
+    font-size: var(--font-size-medium);
+    font-family: var(--font-one);
+    font-weight: bold;
+    border: none;
+    border-radius: var(--border-radius-sm);
+    background-color: var(--color-highlight);
+    color: var(--color-secondary);
+    cursor: pointer;
+}
+
+.hero button:hover {
+    background-color: var(--color-success);
+    transition: 0.3s;
+}
+
+.container .social-media i {
+    text-decoration: none !important;
+    color: var(--color-secondary);
+}
+
+/* ===================
+Grid Sections
+====================*/
+
+.table-alternative {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-large);
+    width: 100%;
+    padding: var(--space-large);
+}
+
+.table-alternative .section-item .text {
+    text-align: left;
+}
+
+.table-alternative a {
+    text-decoration: var(--text-decoration);
+    color: var(--color-secondary);
+}
+
+.section-item .label p {
+    text-align: left;
+    font-size: var(--font-size-extra-large);
+    font-weight: bolder;
+}
+
+.section-item {
+    text-align: var(--text-align);
+    background-color: var(--color-tertiary); /* Adding background color for better visibility */
+    padding: var(--space-medium); /* Adding padding for better spacing */
+    border-radius: 10px; /* Adding border-radius for rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adding box shadow */
+    transition: transform 0.3s, box-shadow 0.3s; /* Adding transition for hover effect */
+}
+
+.section-item:hover {
+    transform: translateY(-10px); /* Adding hover effect to lift the box */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhancing box shadow on hover */
+}
+
+.section-item img {
+    border: solid 2px var(--color-highlight); /* Adding border for better visibility */
+    width: 100px;
+    height: 100px;
+    border-radius: 8%;
+    object-fit: cover; 
+    margin-bottom: var(--space-small); /* Adding margin-bottom for spacing */
+}
+
+.sections {
+    display: flex;
+    padding: var(--space-small);
+    margin: var(--space-large);
+}
+
+
+/*
+.center-hr {
+    width: 50%;
+    border: 0;
+    height: 0.125rem; /* 2px 
+    background-color: var(--accent-color);
+    margin: var(--spacing-medium) auto; /* 20px 
+    border-radius: 0.0625rem; /* 1px 
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: slideIn 1s forwards;
+}
+
+@keyframes slideIn {
+    to {
+        transform: scaleX(1);
+    }
+}
+*/
+
+hr {
+    border-radius: 1px;
+    width: 60px;
+    margin-left: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: slideIn 1s forwards;
+}
+
+@keyframes slideIn {
+    to {
+        transform: scaleX(1);
+    }
+}
+
+/* ====================================
+   Contact Section
+==================================== */
+.contact-container {
+    background: var(--color-tertiary);
+    padding: var(--space-large);
+    border-radius: var(--border-radius-md);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: var(--space-large) auto; /* Center the container */
+}
+
+.form-input {
+    margin-bottom: var(--space-medium);
+}
+
+.form-input label {
+    display: block;
+    margin-bottom: var(--space-small);
+    color: var(--color-secondary);
+}
+
+.form-input input,
+.form-input textarea {
+    width: 100%;
+    padding: var(--space-small);
+    border: 1px solid var(--color-highlight);
+    border-radius: var(--border-radius-sm);
+    box-sizing: border-box;
+}
+
+.contact-container button {
+    background-color: var(--color-highlight);
+    color: var(--color-secondary);
+    padding: var(--space-small) var(--space-medium);
+    border: none;
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+}
+
+.contact-container button:hover {
+    background-color: var(--color-primary);
+}
+
+/* ====================================
+   Footer Section
+==================================== */
+.footer {
+    background-color: var(--color-tertiary);
+    padding: var(--space-medium); 
+}
+
+.footer-section:last-child {
+    flex-basis: 100%;
+    text-align: center;
+    margin-top: var(--space-large); /* 30px */
+}
+
+.footer-section:last-child p {
+    margin-top: 0.625rem; /* 10px */
+    font-size: 0.875rem; /* 14px */
+}
+
+.footer a {
+    text-decoration: none;
+    color: var(--color-secondary);
+}
